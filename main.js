@@ -84,9 +84,9 @@ function addProduct() {
     //productExists is the index of the product
     var productExists = oldProducts.findIndex(e => e.tag === productTag);
 
-    if (productExists >= 0) {
+    if (productExists > -1) {
 
-        console.log("product exists");
+        console.log(productExists, "product exists", oldProducts[productExists].tag + "=="+ productTag);
 
         //if product exists check if its personalised
         if (oldProducts[productExists].prsnl
